@@ -9,6 +9,12 @@ const listingRoutes = require("./routes/listing.js")
 const bookingRoutes = require("./routes/booking.js")
 const userRoutes = require("./routes/user.js")
 
+app.use(cors({
+  origin:["https://traveltango.vercel.app"],
+  methods:["POST","GET"],
+  credentials: true}
+));
+
 // Load environment variables
 try {
   dotenv.config();
